@@ -1,4 +1,4 @@
-package ExerciciosFerias;
+package Semana01.ExerciciosFerias;
 
 import java.util.Scanner;
 
