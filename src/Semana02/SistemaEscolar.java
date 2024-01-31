@@ -116,7 +116,6 @@ public class SistemaEscolar {
 
         Scanner entrada = new Scanner(System.in);
 
-        byte escolha;
 
         Escola.menu(entrada);
 
