@@ -109,9 +109,25 @@ public class SistemaEscolar {
 
     }
 
+    public int listarPedirIndiceCursos(Scanner entrada){
+        listarCursos();
+        System.out.print("Digite qual você deseja excluir: ");
+        return entrada.nextInt();
+
+
+
+    }
+    public int listarPedirIndiceProfessores(Scanner entrada){
+        listarProfessores();
+        System.out.print("Digite qual você deseja excluir: ");
+        return entrada.nextInt();
+
+
+
+    }
+
     public void removerProfessor(Scanner entrada) {
-        System.out.println("Digite qual professor você deseja remover: ");
-        int indice = entrada.nextInt();
+        int indice = listarPedirIndiceProfessores(entrada);
         if (indice >= professores.size()) {
             System.out.println("Opção inválida, por favor tente outro índice");
             removerProfessor(entrada);
@@ -122,15 +138,13 @@ public class SistemaEscolar {
         }
     }
 
-    public void removerCurso(Scanner entrada) {
-        System.out.print("Digite qual curso você deseja remover: ");
-        int indice = entrada.nextInt();
+    public void removerCurso(Scanner entrada) {;
+        int indice = listarPedirIndiceCursos(entrada);
         if (indice >= cursos.size()) {
             System.out.println("Opção inválida, por favor tente outro índice!");
             removerCurso(entrada);
         } else {
             cursos.remove(indice);
-            listarCursos();
             menu(entrada);
         }
     }
