@@ -9,8 +9,8 @@ public class Jogador {
     private ArrayList<Jogador> rankingJogadores;
     private String nome;
     private int idade;
-    private int pontuacao;
-    private int numeroTentativas;
+    private int pontuacao = 0;
+    private int numeroTentativas = 0;
 
     public Jogador() {
         this.rankingJogadores = new ArrayList<>();
