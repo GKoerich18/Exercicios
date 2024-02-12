@@ -42,6 +42,7 @@ public class Jogo {
                 } else {
                     System.out.println("O computador escolheu: " + jogadaGerada);
                     System.out.println("Você perdeu!! \n porém não perdeu pontos porque ja está com 0");
+                    continue;
                 }
             }
             jogador.setNumeroTentativas((jogador.getNumeroTentativas() + 1));
